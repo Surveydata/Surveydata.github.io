@@ -3,7 +3,7 @@ session_start();
 
 // Redirect jika email belum ada di session
 if (!isset($_SESSION['email'])) {
-    header("Location: log.php");
+    header("Location: index.php");
     exit();
 }
 
